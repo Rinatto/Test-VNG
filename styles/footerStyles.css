@@ -1,0 +1,221 @@
+/* Основные стили для подвала */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
+.footer-logo {
+  max-width: 225px;
+  order: 1;
+}
+
+.footer-logo img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  max-width: 300px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer-section p,
+.footer-section ul {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-payment {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer-payment img {
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.footer-payment img:last-child {
+  margin-right: 0;
+}
+
+.footer-email {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section .footer-public {
+  text-align: right;
+}
+
+.footer-section .footer-public a {
+  color: #808080;
+  text-decoration: none;
+}
+.footer-services {
+  order: 3;
+}
+.footer-info,
+.footer-info a {
+  color: #808080;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.footer-pay {
+  padding-top: 10px;
+}
+
+/* Медиа-запрос для 770px и меньше */
+@media (max-width: 770px) {
+  .footer-container {
+    margin-left: 30px;
+    position: relative;
+  }
+
+  /* Логотип на весь ряд */
+  .footer-logo {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-address {
+    order: 2;
+    width: 30%;
+  }
+
+  .footer-contacts {
+    order: 3;
+    width: 30%;
+  }
+  .footer-services {
+    order: 4;
+    width: 30%;
+    position: relative;
+    z-index: 2;
+    height: 0px;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 18px;
+  }
+
+  .footer-public-info {
+    order: 5;
+    width: 60%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-section .footer-public {
+    text-align: left;
+  }
+
+  .footer-pay {
+    order: 6;
+    width: 100%;
+  }
+
+  .footer-payment {
+    justify-content: flex-start;
+  }
+
+  .footer-info {
+    order: 7;
+    width: 100%;
+    max-width: 59%;
+    margin-top: 20px;
+  }
+  .footer-info a {
+    text-decoration: underline;
+  }
+}
+
+/* Медиа-запрос для 390px и меньше */
+@media (max-width: 390px) {
+  .footer-container {
+    margin-left: 10px;
+    flex-direction: column;
+  }
+
+  .footer-section {
+    margin-top: 20px;
+  }
+
+  .footer-address {
+    order: 2;
+    width: 100%;
+  }
+
+  .footer-contacts {
+    order: 3;
+    width: 100%;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-services {
+    order: 4;
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-public-info {
+    order: 5;
+    width: 100%;
+    max-width: 100%;
+  }
+  .footer-pay {
+    order: 6;
+    width: 100%;
+  }
+
+  .footer-info {
+    order: 7;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}

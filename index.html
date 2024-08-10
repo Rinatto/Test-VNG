@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интернет-магазин</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles/mainStyles.css" />
+    <link rel="stylesheet" href="/styles/footerStyles.css" />
+  </head>
+  <body>
+    <div class="bar-info">
+      <ul>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">Гарантия и возврат</a></li>
+        <li><a href="#">EN</a></li>
+      </ul>
+    </div>
+
+    <header>
+      <div class="container">
+        <nav class="main-nav">
+          <img src="images/Logo.svg" />
+          <ul>
+            <li><a href="#">КАТАЛОГ</a></li>
+            <li><a href="#">О КОМПАНИИ</a></li>
+            <li><a href="#">КОНТАКТЫ</a></li>
+          </ul>
+          <div class="hamburger-menu">
+            <img src="/images/hamburger-icon.svg" alt="Меню" />
+          </div>
+          <div class="mobile-menu">
+            <a href="#">КАТАЛОГ</a>
+            <a href="#">О КОМПАНИИ</a>
+            <a href="#">КОНТАКТЫ</a>
+            <div class="header-controls mobile-input">
+              <div class="search-container">
+                <input type="text" class="search-input" placeholder="Лампы" />
+                <button class="search-button">
+                  <object
+                    type="image/svg+xml"
+                    data="/images/search-normal.svg"
+                    width="20"
+                    height="20"
+                  ></object>
+                </button>
+              </div>
+              <div class="cart-container mobile-input">
+                <button class="cart-button">
+                  <object
+                    type="image/svg+xml"
+                    data="/images/cart-icon.svg"
+                    width="24"
+                    height="24"
+                  ></object>
+                  Корзина <span class="cart-count">3</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="header-controls descktop-input">
+            <div class="search-container">
+              <input type="text" class="search-input" placeholder="Лампы" />
+              <button class="search-button">
+                <object
+                  type="image/svg+xml"
+                  data="/images/search-normal.svg"
+                  width="20"
+                  height="20"
+                ></object>
+              </button>
+            </div>
+            <div class="cart-container desctop-cart">
+              <button class="cart-button">
+                <object
+                  type="image/svg+xml"
+                  data="/images/cart-icon.svg"
+                  width="24"
+                  height="24"
+                ></object>
+                Корзина <span class="cart-count">3</span>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>Результаты поиска</h1>
+        <div id="product-list" class="product-list"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="/images/LogoBlack.svg" alt="Urban Dwelling Logo" />
+        </div>
+
+        <div class="footer-section footer-info">
+          <p>
+            Этот сайт защищен от спама службой reCAPTCHA Google.
+            <a href="#">Политика конфиденциальности</a>/<a href="#"
+              >Условия предоставления услуг</a
+            >
+          </p>
+        </div>
+
+        <div class="footer-section footer-address">
+          <h4>Адрес</h4>
+          <p>Текст, Текст, Текст</p>
+        </div>
+
+        <div class="footer-section footer-contacts">
+          <h4>Контакты</h4>
+          <p>
+            Email:
+            <a class="footer-email" href="mailto:urban.dwelling@yandex.com"
+              >urban.dwelling@yandex.com</a
+            >
+          </p>
+          <p>Телефон: 8 (999) 999-99-99</p>
+        </div>
+
+        <div class="footer-section footer-services">
+          <h4>Услуги</h4>
+          <ul>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Гарантия и возврат</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section footer-public-info">
+          <p class="footer-public"><a href="#">Публичная оферта</a></p>
+          <p class="footer-public">
+            <a href="#">Политика персональных данных</a>
+          </p>
+        </div>
+        <div class="footer-section footer-pay">
+          <div class="footer-payment">
+            <img src="/images/Mir.svg" alt="Мир" />
+            <img src="/images/Visa.svg" alt="Visa" />
+            <img src="/images/masterCard.svg" alt="Mastercard" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/scripts/cards.js"></script>
+    <script src="/scripts/split.js"></script>
+  </body>
+</html>

@@ -1,0 +1,491 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "korataki_bold";
+  src: url(../fonts/Korataki/korataki_bold.otf);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bar-info {
+  background-color: #231815;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: small;
+  height: 40px;
+}
+
+.bar-info ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding-top: 12px;
+  gap: 70px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bar-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  padding: 10px 0;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin-top: revert;
+  gap: 100px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: large;
+}
+
+.main-nav a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Стили для общего контейнера */
+.header-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Стили для контейнера поиска */
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 88px;
+  padding: 0 10px;
+  background-color: #fff;
+  width: 170px;
+  height: 39px;
+}
+
+/* Стили для поля ввода */
+.search-input {
+  width: 130px;
+  height: 37px;
+  border-radius: 88px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  padding-left: 10px;
+  flex-grow: 1;
+}
+
+/* Стили для кнопки поиска */
+.search-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Стили для SVG объекта в поиске */
+.search-button object {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+/* Стили для контейнера корзины */
+.cart-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Стили для кнопки корзины */
+.cart-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 88px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  height: 39px;
+}
+
+/* Стили для SVG объекта в корзине */
+.cart-button object {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+/* Стили для индикатора количества товаров */
+.cart-count {
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+  padding: 1px 5px;
+  margin-left: 12px;
+  margin-top: -14px;
+  font-size: 14px;
+  position: absolute;
+  font-family: "Inter", sans-serif;
+}
+
+.cart {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.cart a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 20px 0;
+  font-family: "korataki_bold";
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Общие стили для карточки */
+.product-card {
+  width: calc(25% - 15px);
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Стили для бейджа "Акция" */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #000;
+  color: #fff;
+  padding: 11px 40px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 10;
+  width: 126px;
+  height: 38px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+/* Стили для контейнера изображения */
+.image-container {
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+}
+
+/* Стили для изображения товара */
+.product-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Стили для контейнера с кнопкой и фоном */
+.details-container {
+  position: absolute;
+  width: 283px;
+  height: 88px;
+  top: 340px;
+  background-color: #f5f5f5b2;
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+/* Стили для кнопки "Подробнее" */
+.details-button {
+  background-color: #e05a00;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  width: 258px;
+  height: 48px;
+  padding: 0px 48px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Lato", sans-serif;
+}
+
+/* Стили для заголовка товара */
+.product-title {
+  font-size: 18px;
+  color: #333;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+/* Стили для цен */
+.product-price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.current-price {
+  font-size: 24px;
+  color: #e05a00;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.old-price {
+  font-size: 20px;
+  color: #999;
+  text-decoration: line-through;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+/* Черная цена для товаров без акции */
+.no-discount .current-price {
+  color: #000;
+}
+
+/* Эффект при наведении на карточку */
+.product-card:hover .details-container {
+  opacity: 1;
+}
+
+/* Эффект увеличения изображения при наведении на карточку */
+.product-card:hover .image-container .product-image {
+  transform: scale(1.1);
+}
+
+/* Кнопка "Подробнее" всегда видима у первой карточки */
+.first-card .details-container {
+  opacity: 1 !important;
+}
+.product-item {
+  background: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: calc(33.333% - 10px);
+  text-align: center;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Медиа-запрос для 1600px */
+@media (max-width: 1600px) {
+  .product-item {
+    width: calc(33.333% - 15px);
+  }
+}
+
+/* Медиа-запрос для 770px */
+@media (max-width: 770px) {
+  .bar-info {
+    display: none;
+  }
+
+  .product-item {
+    width: calc(50% - 10px);
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    padding: 10px 0;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .descktop-input,
+  descktop-cart {
+    display: none;
+  }
+
+  .main-nav img {
+    width: 120px; /* Уменьшение размера логотипа */
+    margin-bottom: 10px;
+  }
+
+  .main-nav ul {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger-menu img {
+    width: 40px;
+    height: auto;
+  }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  .mobile-menu a {
+    padding: 15px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+  }
+  .product-card {
+    width: calc(
+      50% - 10px
+    ); /* Каждая карточка занимает половину ширины контейнера минус отступ */
+    margin-bottom: 20px;
+  }
+
+  .header-controls {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .search-container,
+  .cart-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-container {
+    max-width: 300px;
+  }
+
+  .cart-container {
+    max-width: 150px;
+  }
+}
+
+/* Медиа-запрос для 390px */
+@media (max-width: 390px) {
+  .bar-info {
+    display: none;
+  }
+
+  .product-item {
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  h1 {
+    margin: 20px 0;
+    font-family: "korataki_bold";
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 50%; /* Уменьшаем ширину карточки */
+    height: auto; /* Автоматическая высота */
+  }
+
+  .product-title {
+    font-size: 16px; /* Уменьшаем размер шрифта заголовка */
+  }
+
+  .current-price {
+    font-size: 20px; /* Уменьшаем размер шрифта текущей цены */
+  }
+
+  .old-price {
+    font-size: 16px; /* Уменьшаем размер шрифта старой цены */
+  }
+
+  .details-container {
+    display: none; /* Убираем кнопку "Подробнее" */
+  }
+}
